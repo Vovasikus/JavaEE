@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" />
+    <title>Security with Spring Boot</title>
+
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron mt-3">
+        <h1 id="userName" th:inline="text">Hello, [[${name}]]!</h1>
+        <p class="lead">What do you want to do?</p>
+        <div th:unless="${name.toString() == 'admin'}">
+            <a class="btn btn-lg btn-primary" th:href="@{/entermetrics}" role="button">Go to entering cold water's metric &raquo;</a>
+            <a class="btn btn-lg btn-primary" th:href="@{/mymetrics}" role="button">Go to my metrics table &raquo;</a>
+        </div>
+        <div th:if="${name.toString() == 'admin'}">
+            <a class="btn btn-lg btn-primary" th:href="@{/metrics}" role="button">Go to users metrics &raquo;</a>
+        </div>
+        <br/>
+        <form th:action="@{/logout}" method="post">
+            <button class="btn btn-lg btn-primary" type="submit">Sign out</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

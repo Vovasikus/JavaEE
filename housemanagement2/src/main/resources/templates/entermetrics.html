@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" />
+    <title>Enter a volume</title>
+</head>
+<body>
+<h1 class="ml-lg-3">Enter your volume:</h1>
+<!--/*@thymesVar id="metric" type="ru.housemanagement.model.Metric"*/-->
+<form action="#" th:action="@{/entermetrics/submit}" th:object="${metric}" method="GET">
+    <div class="input-group col col-lg-4">
+        <input type="text" th:field="*{vol}" class="form-control" placeholder="Volume" aria-label="Volume" aria-describedby="basic-addon2"/>
+        <span class="input-group-addon" id="basic-addon2">m3</span>
+    </div>
+    <br/>
+    <input class="btn btn-primary btn-lg" style="margin-left: 17.5rem" type="submit" value="Enter"/>
+</form>
+</body>
+</html>

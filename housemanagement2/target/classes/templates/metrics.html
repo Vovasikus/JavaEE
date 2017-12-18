@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" />
+
+    <title>Users metrics</title>
+</head>
+<body>
+<h1 class="ml-lg-5">Table of user's metrics</h1>
+<div class="table-responsive ml-lg-3 col col-lg-8 col-md-8">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col" class="col col-lg-auto">User</th>
+        <th scope="col" class="col col-lg-auto">Volume</th>
+        <th scope="col" class="col col-lg-auto">Created at</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr th:each="metric : ${metrics}">
+            <td th:text="${metric.owner}"></td>
+            <td th:text="${metric.vol}"></td>
+            <td th:text="${metric.timeoffilling}"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<a href="/" class="btn btn-primary btn-lg active ml-lg-5" role="button" aria-pressed="true">&laquo; Go back</a>
+</body>
+</html>
