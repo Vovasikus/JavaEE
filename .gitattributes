@@ -1,1 +1,2 @@
- lib/linguist.rb linguist-language=Java
+$ cat .gitattributes
+linguist-language=Java
