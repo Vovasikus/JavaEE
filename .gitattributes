@@ -1,2 +1,1 @@
-$ cat .gitattributes
-templates/* linguist-vendored
+/src/main/resources/templates/* linguist-vendored
