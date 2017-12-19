@@ -7,9 +7,7 @@ Used Spring Boot, Spring secutity, Thymeleaf, SQLite DB, Bootstrap.
 2. Users can view table of own records in DB, including username, volume and time of creation the records.
 3. Admin ('admin') can view table of users consumed volume with username and time of creation the records.
 4. File housemanagementdb.db consists this tables:
-Metrics (consits users volume metrics)
-Users (consists username and password for access to Housemanagement)
-User_roles (consists users roles for Spring security)
+metrics (consits users volume metrics), users (consists username and password for access to Housemanagement), user_roles (consists users roles for Spring security)
 5. Usernames and Passwords for access to Housemanagement:
 <table>    
     <tr>
