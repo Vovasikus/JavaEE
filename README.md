@@ -1,7 +1,6 @@
-# JavaEE
 <h1>Housemanagement.</h1>
 Spring Boot mini-project Housemanagement v2.0. 
-Used Spring Boot, Spring secutity, Thymeleaf, SQLite DB, Bootstrap.
+Used Spring Boot, Spring security, Thymeleaf, SQLite DB, Bootstrap.
 
 1. You can authorize in system as user1, user2, user3 or admin. Users ('user1', 'user2', 'user3') can enter your consumed volume of water and this number inserts in housemanagementdb (SQLite-based DB). 
 2. Users can view table of own records in DB, including username, volume and time of creation the records.
